@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Department of Computer Science </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="addTodoForm.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&family=Lobster&family=Open+Sans:wght@400;500;800&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+<div class="container" >
+
+    <div class="text-center"><h1>Welcome to My ToDo App</h1></div>
+
+    <form th:action="@{/}" th:object="${task}" method="post">
+
+
+        <input type="text" class="form-control py-3" name="taskName" placeholder="add your todo task title here " th:field="*{taskName}" required>
+
+        <button type="submit"> <strong>+</strong> Add Task</button>
+    </form>
+
+</div>
+<div class="container one">
+    <div class="row justify-content-center">
+
+        <div class="box col-8 text-light ">
+          <p class="mt-4"><strong>About.this : </strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+</body>
+</html>

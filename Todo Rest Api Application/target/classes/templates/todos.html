@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Department of Computer Science </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="todos.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&family=Lobster&family=Open+Sans:wght@400;500;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <br>
+    <hr>
+    <br>
+    <div class="container">
+        <h1 style="font-family: 'Lobster', cursive;"
+            class="text-center  text-light px-3 py-2"> Daily life Todo list App</h1>
+    </div>
+    <div class="container py-3">
+        <a th:href="@{/newTodo}"> <button> <strong>+</strong> add more todos</button></a>
+
+    </div>
+    <div class="container">
+
+        <table class="table table-striped table-bordered ">
+
+            <tbody>
+            <tr th:each="t: ${allTasks}">
+                <td class="text-light  px-4 py-3 h3 " th:text="${t.taskName}"></td>
+                <td class="text-center">
+                    <a th:href="@{/deleteById/{id} (id=${t.id})}" class="btn btn-danger text-light"> Task completed and Delete </a>
+                </td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <br>
+    <br><br>
+</div>
+
+    <br><br><br><br>
+    <hr>
+<div class="container text-center text-light">
+    <p>All &copy; Rights Reserved </p>
+</div>
+</body>
+</html>

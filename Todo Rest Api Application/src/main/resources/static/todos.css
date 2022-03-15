@@ -1,0 +1,22 @@
+body{
+    background-image: url("bg.gif");
+}
+.container h1{
+    font-size: 40pt;
+}
+.container button{
+    border: none;
+    background-color: white;
+    display: inline-block;
+    padding: 15px 100px 15px;
+    border-radius: 5px;
+    margin-left: 23rem;
+    color: #C3476C;
+}
+
+.container  a{
+    font-size: 25px;
+    font-family: "Bodoni MT Poster Compressed";
+    text-decoration: none;
+
+}
